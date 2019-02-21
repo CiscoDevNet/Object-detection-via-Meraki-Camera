@@ -1,5 +1,6 @@
 # Object detection via Meraki Camera
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/Object-detection-via-Meraki-Camera)
+
 Image object detection via Meraki Camera snapshot API in browser.
 
 Using YOLO(You only look once) real-time object detection built-in [ML5.js](https://ml5js.org/) (based on [Tensorflow.js](https://js.tensorflow.org/)) to detect images returned from Meraki Snapshot API.
