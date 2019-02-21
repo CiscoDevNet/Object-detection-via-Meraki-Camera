@@ -1,0 +1,6 @@
+requests
+simplejson
+uuid
+flask
+flask-cors
+python-dateutil
