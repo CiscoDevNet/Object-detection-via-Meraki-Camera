@@ -4,6 +4,7 @@
 Image object detection via Meraki Camera snapshot API in browser.
 
 Using YOLO(You only look once) real-time object detection built-in [ML5.js](https://ml5js.org/) (based on [Tensorflow.js](https://js.tensorflow.org/)) to detect images returned from Meraki Snapshot API.
+
 ![](https://media.giphy.com/media/fqgeyyhSfl763ZIxNN/giphy.gif)
 
 
