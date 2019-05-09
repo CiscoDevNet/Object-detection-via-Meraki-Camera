@@ -25,7 +25,7 @@ Using YOLO(You only look once) real-time object detection built-in [ML5.js](http
 
 ## Run
 
-1. Execute `pythhon3 app.py` at the root folder
+1. Execute `python3 app.py` at the root folder
 2. Open `http://0.0.0.0:8088/` with the Chrome browser 
 
 
