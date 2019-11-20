@@ -31,7 +31,6 @@ async function setup() {
 async function load_image() {
     current_image = await fetch_meraki_live_snapshort();
 
-
     status.html("Image loaded");
 
     objects = await yolo.detect(current_image);
