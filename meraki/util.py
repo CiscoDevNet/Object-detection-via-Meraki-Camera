@@ -36,19 +36,24 @@ def get_snapshot(serial, ts, network_id=NETWORK_ID):
 
         url = resp["url"]
 
-        print("Image url : {0}".format(url))
+        snapshot_url = "/static/{0}.jpeg".format(ts)
+        snapshot_file = os.path.join(os.getcwd(), "." + snapshot_url)
 
         # attempt to fetch the image for 20 times
 
-        for i in range(0, 20):
-            resp = requests.request("GET", url)
+        for i in range(0, 50):
+            resp = requests.request("GET", url, stream=True)
             if int(resp.status_code / 100) == 2:
                 print("{0} time succeed".format(i))
+                with open(snapshot_file, 'wb') as f:
+                    for chunk in resp:
+                        f.write(chunk)
+
                 break
             else:
                 print("{0} time failed".format(i))
 
-        return url
+        return snapshot_url
     else:
         return None
 

@@ -21,7 +21,7 @@ async function setup() {
 
     yolo = await ml5.YOLO();
 
-    status.html("Model loaded");
+    status.html("Model loaded - loading snapshot from Meraki MV camera");
 
     await load_image()  
 
@@ -41,7 +41,7 @@ async function load_image() {
     status.html("Image detected");
 
     // Continuously detecting
-    // await load_image()
+    await load_image()
 }
 
 
@@ -51,7 +51,9 @@ function draw() {
         return
     }
 
-    image(current_image, 0, 0, width, height);
+    try{
+        image(current_image, 0, 0, width, height);
+    
 
     objects.forEach((item) => {
         noStroke();
@@ -64,6 +66,10 @@ function draw() {
         rect(item.x * width, item.y * height, item.w * width, item.h * height);
 
     })
+        
+        }catch (e) {
+
+    }
 
 }
 
